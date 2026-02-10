@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dino Valentine</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🦕</text></svg>">
+</head>
+<body>
+    <div id="game-container">
+        <canvas id="game-canvas"></canvas>
+        <div id="ui-layer">
+            <div id="start-screen" class="screen">
+                <h1>I have a question</h1>
+                <p>Press Space or Tap to Jump</p>
+                <button id="start-btn">Start Game</button>
+            </div>
+            <div id="game-over-screen" class="screen hidden">
+                <h1>Game Over</h1>
+                <button id="restart-btn">Try Again</button>
+            </div>
+            <div id="proposal-screen" class="screen hidden">
+                <h1 id="proposal-text">Will you be my Valentine?</h1>
+                <div class="buttons">
+                    <button id="yes-btn">YES</button>
+                    <button id="no-btn">NO</button>
+                </div>
+            </div>
+            <div id="success-screen" class="screen hidden">
+                <h1>She said YES!</h1>
+                <div id="celebration-gif"></div>
+            </div>
+            <div id="retry-screen" class="screen hidden">
+                <h1>Try Again...</h1>
+                <div id="sad-gif"></div>
+                <button id="retry-btn">Restart</button>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
