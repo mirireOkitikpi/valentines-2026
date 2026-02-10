@@ -21,9 +21,7 @@ body {
     position: relative;
     width: 100%;
     max-width: 800px;
-    /* Standard width for desktop */
     height: 300px;
-    /* Standard height for runner games */
     border-bottom: 2px solid var(--text-color);
     background-color: white;
     box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
@@ -33,7 +31,6 @@ canvas {
     display: block;
     width: 100%;
     height: 100%;
-    /* Ensure canvas is crisp on retina */
     image-rendering: pixelated;
 }
 
@@ -44,7 +41,6 @@ canvas {
     width: 100%;
     height: 100%;
     pointer-events: none;
-    /* Let clicks pass through to canvas unless on buttons */
     display: flex;
     justify-content: center;
     align-items: center;

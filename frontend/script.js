@@ -16,7 +16,7 @@ let cactiJumped = 0;
 let lastObstacleTime = 0;
 let gameSpeed = GAME_SPEED;
 
-// Proposal Words
+// Words
 const proposalWords = ["Rachel,", "will", "you", "be", "my", "valentine?", "<3"];
 let currentWordIndex = 0;
 let displayedWords = [];
@@ -139,9 +139,9 @@ function resetGameLogic() {
 }
 
 function spawnObstacle() {
-    // Stop spawning if we have enough obstacles for the words
-    // We need exactly proposalWords.length obstacles.
-    // currentWordIndex counts how many we HAVE spawned.
+    // Stop spawning if there are enough obstacles for the words
+    // need exactly proposalWords.length obstacles.
+    // currentWordIndex counts how many words HAVE spawned.
 
     if (currentWordIndex >= proposalWords.length) return;
 
@@ -191,7 +191,7 @@ function drawParticles() {
     for (let p of particles) {
         ctx.fillStyle = p.color;
 
-        // Draw Heart Shape approximation
+        // Draw Heart Shape 
         ctx.beginPath();
         const size = 5 * p.life;
         ctx.moveTo(p.x, p.y);
@@ -220,7 +220,6 @@ function update() {
         obs.x -= gameSpeed;
 
         // Collision detection (Simple AABB)
-        // Tune hitbox slightly to be forgiving
         if (
             dino.x + 5 < obs.x + obs.width - 5 &&
             dino.x + dino.width - 5 > obs.x + 5 &&
@@ -283,8 +282,7 @@ function draw() {
         ctx.fillRect(obs.x + 20, obs.y + 5, 5, 10); // Right arm
     }
 
-    // Draw Revealled Words
-    // We want to draw them nicely at the top
+    // Draw Words
     if (displayedWords.length > 0) {
         ctx.fillStyle = '#ff4081'; // Accent color for text
         ctx.font = '20px "Press Start 2P"';
@@ -327,8 +325,8 @@ function handleProposalResponse(response, event) {
         gifContainer.innerHTML = '<img src="https://media1.tenor.com/m/s43Jgh0jekAAAAAC/gif.gif" alt="Happy Dance" style="max-width: 100%; border-radius: 8px;">';
     } else {
         document.getElementById('retry-screen').classList.remove('hidden');
-        const gifContainer = document.getElementById('sad-gif');
-        gifContainer.innerHTML = '<img src="https://media.tenor.com/2sZYV3zXw8MAAAAC/sad-pikachu.gif" alt="Sad" style="max-width: 100%; border-radius: 8px;">';
+        //const gifContainer = document.getElementById('sad-gif');
+        //gifContainer.innerHTML = '<img src="https://media.tenor.com/2sZYV3zXw8MAAAAC/sad-pikachu.gif" alt="Sad" style="max-width: 100%; border-radius: 8px;">';
     }
 
     // Call Backend
