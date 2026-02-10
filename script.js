@@ -2,9 +2,9 @@ const canvas = document.getElementById('game-canvas');
 const ctx = canvas.getContext('2d');
 
 // Game Constants
-const GRAVITY = 0.8;
+const GRAVITY = 0.65; //nerfed cos she's buns
 const JUMP_FORCE = -12;
-const GROUND_Y = 220;
+const GROUND_Y = 200; // a bit slower
 const GAME_SPEED = 6;
 const OBSTACLE_INTERVAL_MIN = 1200; // ms
 const OBSTACLE_INTERVAL_MAX = 2500; // ms
@@ -17,7 +17,7 @@ let lastObstacleTime = 0;
 let gameSpeed = GAME_SPEED;
 
 // Words
-const proposalWords = ["Rachel,", "will", "you", "be", "my", "valentine?", "<3"];
+const proposalWords = ["Rachel,", "will", "you", "be", "my", "valentine?"];
 let currentWordIndex = 0;
 let displayedWords = [];
 
