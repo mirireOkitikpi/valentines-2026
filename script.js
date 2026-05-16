@@ -17,7 +17,7 @@ let lastObstacleTime = 0;
 let gameSpeed = GAME_SPEED;
 
 // Words
-const proposalWords = ["Rachel,", "will", "you", "be", "my", "valentine?"];
+const proposalWords = ["___,", "will", "you", "be", "my", "valentine?"];
 let currentWordIndex = 0;
 let displayedWords = [];
 
